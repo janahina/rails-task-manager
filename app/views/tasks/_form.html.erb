@@ -1,0 +1,8 @@
+<div class="container mt-5 p-5">
+  <%= simple_form_for @task do |f| %>
+      <%= f.input :title, label:"Task title", error: 'Task title is mandatory, please specify one'  %>
+      <%= f.input :details, label:"Task details", hint: 'No special characters.' %>
+      <%= f.input :completed, as: :boolean, checked_value: true, unchecked_value: false, label:"Task completed" %>
+      <%= f.button :submit %>
+    <% end %>
+</div>

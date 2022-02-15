@@ -1,0 +1,15 @@
+<div class="containermt-5 p-5">
+
+  <h1><%= 'My Task' %></h1>
+  <h2><%= @task.title %></h2>
+  <p><%= @task.details %></p>
+  <p><%= @task.completed %></p>
+  <div>
+    <p class="btn btn-light link-primary"><strong><%= link_to("Go to all my tasks", tasks_path) %></p>
+    <p class="btn btn-light link-primary"><strong><%= link_to "Update new task", task_edit_path(@task) %></p>
+    <p class="btn btn-light link-primary"><strong><%= link_to "Delete #{@task.title}",
+                task_path(@task),
+                method: :delete,
+              data: { confirm: "Are you sure?" } %></p>
+  </div>
+</div>
